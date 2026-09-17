@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Rolling Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body onload="rollDice()">
+
+    <main class="game-container">
+        <header>
+            <h1>🎲 Dice Rolling Game</h1>
+            <p class="instructions">
+                Roll two six-sided dice and see your results. 
+                Click <strong>Roll Dice</strong> or press <strong>Enter</strong>
+                to roll again. Your total is calculated automatically.
+            </p>
+        </header>
+
+        <section class="dice-card">
+            <div class="field-group">
+                <label for="die1">Die 1</label>
+                <input
+                    type="text"
+                    id="die1"
+                    readonly
+                    aria-label="Result of die one"
+                >
+            </div>
+
+            <div class="field-group">
+                <label for="die2">Die 2</label>
+                <input
+                    type="text"
+                    id="die2"
+                    readonly
+                    aria-label="Result of die two"
+                >
+            </div>
+
+            <div class="field-group total-field">
+                <label for="total">Total</label>
+                <input
+                    type="text"
+                    id="total"
+                    readonly
+                    aria-label="Total of both dice"
+                >
+            </div>
+
+            <button
+                id="rollButton"
+                onclick="rollDice()"
+                autofocus
+            >
+                Roll Dice
+            </button>
+        </section>
+
+        <p id="message" class="message">Ready to roll!</p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

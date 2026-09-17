@@ -1,0 +1,152 @@
+/* Page layout */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #667eea,
+        #764ba2
+    );
+
+    color: #222;
+}
+
+/* Main application */
+.game-container {
+    width: 90%;
+    max-width: 500px;
+    padding: 35px;
+
+    background: #ffffff;
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.25);
+
+    text-align: center;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 15px;
+
+    color: #4b3f72;
+    font-size: 2rem;
+}
+
+.instructions {
+    margin-bottom: 30px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Dice fields */
+.dice-card {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.field-group {
+    display: grid;
+    grid-template-columns: 1fr 120px;
+    align-items: center;
+    gap: 15px;
+}
+
+label {
+    text-align: left;
+    font-weight: bold;
+    color: #444;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+
+    border: 2px solid #ddd;
+    border-radius: 8px;
+
+    background-color: #f5f5f5;
+
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    /* Right-justify all numbers */
+    text-align: right;
+}
+
+/* Highlight total */
+.total-field input {
+    background-color: #eee8ff;
+    border-color: #764ba2;
+    color: #4b3f72;
+}
+
+/* Roll button */
+button {
+    margin-top: 10px;
+    padding: 14px 25px;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: #764ba2;
+    color: white;
+
+    font-size: 1.1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s,
+        transform 0.1s;
+}
+
+button:hover {
+    background-color: #5d3b86;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+button:focus {
+    outline: 3px solid #a99bd8;
+    outline-offset: 3px;
+}
+
+/* Status message */
+.message {
+    margin-top: 25px;
+    margin-bottom: 0;
+
+    font-weight: bold;
+    color: #666;
+}
+
+/* Mobile-friendly layout */
+@media (max-width: 450px) {
+    .game-container {
+        padding: 25px 20px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    .field-group {
+        grid-template-columns: 1fr 100px;
+    }
+}
