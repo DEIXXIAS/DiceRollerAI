@@ -7,11 +7,11 @@ function rollDice() {
     const total = die1 + die2;
 
     // Display the random results.
-    document.getElementById("die1").value = die1;
-    document.getElementById("die2").value = die2;
+    document.getElementById("die1_value").value = die1;
+    document.getElementById("die2_value").value = die2;
 
     // Display the calculated total.
-    document.getElementById("total").value = total;
+    document.getElementById("total_value").value = total;
 
     // Update the status message.
     document.getElementById("message").textContent =
